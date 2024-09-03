@@ -1,0 +1,516 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\dummy mvc\\StudentWebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4FFCB96-BD5D-4152-90CD-FBB783EEFF5A}|..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj|d:\\studentapicleanarch\\student.infrastructure\\repositories\\entityframeworkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4575D26-9C45-455B-9C73-E6BEC405B386}|..\\..\\StudentApiCleanArch\\Student.Domain\\Student.Domain.csproj|d:\\studentapicleanarch\\student.domain\\entities\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC1116E1-804E-4C3C-B6DE-252E0C8D87CE}|..\\Student.Application\\Student.Application.csproj|d:\\dummy mvc\\student.application\\abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC1116E1-804E-4C3C-B6DE-252E0C8D87CE}|..\\Student.Application\\Student.Application.csproj|d:\\dummy mvc\\student.application\\student.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\studenthobbiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\studenthobbiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\qualificationscontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\qualificationscontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\hobbiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\hobbiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\dtos\\studenthobbiesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:dtos\\studenthobbiesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\mappingprofiles\\profiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:mappingprofiles\\profiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4575D26-9C45-455B-9C73-E6BEC405B386}|..\\..\\StudentApiCleanArch\\Student.Domain\\Student.Domain.csproj|d:\\studentapicleanarch\\student.domain\\entities\\studenthobbies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\dtos\\qualificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:dtos\\qualificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4575D26-9C45-455B-9C73-E6BEC405B386}|..\\..\\StudentApiCleanArch\\Student.Domain\\Student.Domain.csproj|d:\\studentapicleanarch\\student.domain\\entities\\qualifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4575D26-9C45-455B-9C73-E6BEC405B386}|..\\..\\StudentApiCleanArch\\Student.Domain\\Student.Domain.csproj|d:\\studentapicleanarch\\student.domain\\entities\\hobbies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4FFCB96-BD5D-4152-90CD-FBB783EEFF5A}|..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj|d:\\studentapicleanarch\\student.infrastructure\\repositories\\unitofworkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC1116E1-804E-4C3C-B6DE-252E0C8D87CE}|..\\Student.Application\\Student.Application.csproj|d:\\dummy mvc\\student.application\\abstractions\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4575D26-9C45-455B-9C73-E6BEC405B386}|..\\..\\StudentApiCleanArch\\Student.Domain\\Student.Domain.csproj|d:\\studentapicleanarch\\student.domain\\entities\\studentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240902120823_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4FFCB96-BD5D-4152-90CD-FBB783EEFF5A}|..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj|d:\\studentapicleanarch\\student.infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC1116E1-804E-4C3C-B6DE-252E0C8D87CE}|..\\Student.Application\\Student.Application.csproj|d:\\dummy mvc\\student.application\\abstractions\\istudentinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4FFCB96-BD5D-4152-90CD-FBB783EEFF5A}|..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj|d:\\studentapicleanarch\\student.infrastructure\\student.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4FFCB96-BD5D-4152-90CD-FBB783EEFF5A}|..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj|d:\\studentapicleanarch\\student.infrastructure\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\madhurajk\\AppData\\Local\\Temp\\.vsdbgsrc\\8fa820a196869d024e68ba7670c7421fbb2d9bb422ac443d9ce2275e117ec1ec\\StudentController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240829090807_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|d:\\dummy mvc\\studentwebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{038AD4B0-D127-4EC7-A930-66467D0449A4}|StudentWebApi.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dummy mvc\\Student.Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dummy mvc\\Student.Application\\Services\\Services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAcwHUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T06:02:46.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentHobbiesController.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\StudentHobbiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentHobbiesController.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\StudentHobbiesController.cs",
+              "RelativeToolTip": "Controllers\\StudentHobbiesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:29:35.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.Application.csproj",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Student.Application.csproj",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Student.Application.csproj",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Student.Application.csproj",
+              "RelativeToolTip": "..\\Student.Application\\Student.Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-28T11:34:55.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Abstractions\\IRepository.cs",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Abstractions\\IRepository.cs",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Abstractions\\IRepository.cs",
+              "RelativeToolTip": "..\\Student.Application\\Abstractions\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T12:05:32.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Courses.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Courses.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Courses.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Courses.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Courses.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:36:00.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EntityFrameworkRepository.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\EntityFrameworkRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\EntityFrameworkRepository.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\EntityFrameworkRepository.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\EntityFrameworkRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T12:07:47.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoursesController.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "Controllers\\CoursesController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:25:23.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QualificationsControlller.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\QualificationsControlller.cs",
+              "RelativeDocumentMoniker": "Controllers\\QualificationsControlller.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\QualificationsControlller.cs",
+              "RelativeToolTip": "Controllers\\QualificationsControlller.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAswEkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:28:48.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HobbiesController.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\HobbiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HobbiesController.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\HobbiesController.cs",
+              "RelativeToolTip": "Controllers\\HobbiesController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAE8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:28:08.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StudentHobbiesDTO.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\DTOs\\StudentHobbiesDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\StudentHobbiesDTO.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\DTOs\\StudentHobbiesDTO.cs",
+              "RelativeToolTip": "DTOs\\StudentHobbiesDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T06:41:29.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Profiles.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\MappingProfiles\\Profiles.cs",
+              "RelativeDocumentMoniker": "MappingProfiles\\Profiles.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\MappingProfiles\\Profiles.cs",
+              "RelativeToolTip": "MappingProfiles\\Profiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:25:37.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentHobbies.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentHobbies.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentHobbies.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentHobbies.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentHobbies.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:37:28.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QualificationDTO.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\DTOs\\QualificationDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\QualificationDTO.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\DTOs\\QualificationDTO.cs",
+              "RelativeToolTip": "DTOs\\QualificationDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T06:18:43.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Qualifications.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Qualifications.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Qualifications.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Qualifications.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Qualifications.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAwwC8AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:36:41.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Hobbies.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Hobbies.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Hobbies.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Hobbies.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Hobbies.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:36:21.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Abstractions\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Abstractions\\IUnitOfWork.cs",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Abstractions\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\Student.Application\\Abstractions\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T04:46:25.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UnitOfWorkRepository.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\UnitOfWorkRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\UnitOfWorkRepository.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\UnitOfWorkRepository.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\UnitOfWorkRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T05:49:54.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwBgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T18:38:17.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StudentDetails.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentDetails.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentDetails.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentDetails.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\StudentDetails.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAA7wCwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:37:08.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IStudentInterface.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Abstractions\\IStudentInterface.cs",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Abstractions\\IStudentInterface.cs",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Abstractions\\IStudentInterface.cs",
+              "RelativeToolTip": "..\\Student.Application\\Abstractions\\IStudentInterface.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwA8AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T11:36:13.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T05:10:21.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20240902120823_initial.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240902120823_initial.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240902120823_initial.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240902120823_initial.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240902120823_initial.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T12:08:23.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Student.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-28T19:16:03.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-28T18:43:53.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\StudentRepository.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Repositories\\StudentRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T11:51:20.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\madhurajk\\AppData\\Local\\Temp\\.vsdbgsrc\\8fa820a196869d024e68ba7670c7421fbb2d9bb422ac443d9ce2275e117ec1ec\\StudentController.cs",
+              "ToolTip": "C:\\Users\\madhurajk\\AppData\\Local\\Temp\\.vsdbgsrc\\8fa820a196869d024e68ba7670c7421fbb2d9bb422ac443d9ce2275e117ec1ec\\StudentController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAtwFgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T10:08:44.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Services.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Services\\Services.cs",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Services\\Services.cs",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Services\\Services.cs",
+              "RelativeToolTip": "..\\Student.Application\\Services\\Services.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T16:09:56.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20240829090807_initial.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240829090807_initial.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240829090807_initial.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240829090807_initial.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Infrastructure\\Migrations\\20240829090807_initial.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAgwEcAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T09:08:07.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\StudentWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\dummy mvc\\StudentWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T06:06:59.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Users.cs",
+              "ToolTip": "D:\\StudentApiCleanArch\\Student.Domain\\Entities\\Users.cs",
+              "RelativeToolTip": "..\\..\\StudentApiCleanArch\\Student.Domain\\Entities\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:37:51.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\dummy mvc\\Student.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\Student.Application\\Class1.cs",
+              "ToolTip": "D:\\dummy mvc\\Student.Application\\Class1.cs",
+              "RelativeToolTip": "..\\Student.Application\\Class1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T06:15:56.847Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
