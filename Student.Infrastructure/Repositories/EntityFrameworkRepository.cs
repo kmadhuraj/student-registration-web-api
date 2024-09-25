@@ -25,8 +25,7 @@ namespace Student.Infrastructure.Repositories
         {
              _dbset.Add(entity);
              await _context.SaveChangesAsync();
-              
-       
+        
         }
 
         public async Task DeleteAsync(T entity)
@@ -37,7 +36,7 @@ namespace Student.Infrastructure.Repositories
 
         public async Task<IEnumerable<T>> GetAll()
         {
-             return _dbset.ToList();
+             return  _dbset.ToList();
         }
 
         public async Task<T> GetById(int id)

@@ -4752,13 +4752,13 @@
     },
     "Student.Domain/1.0.0": {
       "type": "project",
-      "path": "../../StudentApiCleanArch/Student.Domain/Student.Domain.csproj",
-      "msbuildProject": "../../StudentApiCleanArch/Student.Domain/Student.Domain.csproj"
+      "path": "../Student.Domain/Student.Domain.csproj",
+      "msbuildProject": "../Student.Domain/Student.Domain.csproj"
     },
     "Student.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../StudentApiCleanArch/Student.Infrastructure/Student.Infrastructure.csproj",
-      "msbuildProject": "../../StudentApiCleanArch/Student.Infrastructure/Student.Infrastructure.csproj"
+      "path": "../Student.Infrastructure/Student.Infrastructure.csproj",
+      "msbuildProject": "../Student.Infrastructure/Student.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4780,11 +4780,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dummy mvc\\StudentWebApi\\StudentWebApi.csproj",
+      "projectUniqueName": "D:\\StudentApiCleanArch\\StudentWebApi\\StudentWebApi.csproj",
       "projectName": "StudentWebApi",
-      "projectPath": "D:\\dummy mvc\\StudentWebApi\\StudentWebApi.csproj",
+      "projectPath": "D:\\StudentApiCleanArch\\StudentWebApi\\StudentWebApi.csproj",
       "packagesPath": "C:\\Users\\madhurajk\\.nuget\\packages\\",
-      "outputPath": "D:\\dummy mvc\\StudentWebApi\\obj\\",
+      "outputPath": "D:\\StudentApiCleanArch\\StudentWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\madhurajk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4801,8 +4801,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\dummy mvc\\Student.Application\\Student.Application.csproj": {
-              "projectPath": "D:\\dummy mvc\\Student.Application\\Student.Application.csproj"
+            "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj": {
+              "projectPath": "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj"
             },
             "D:\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj": {
               "projectPath": "D:\\StudentApiCleanArch\\Student.Infrastructure\\Student.Infrastructure.csproj"

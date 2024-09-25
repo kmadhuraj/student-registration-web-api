@@ -44,7 +44,7 @@ namespace StudentWebApi.Controllers
 
         }
 
-        [HttpGet("Qualifications{id}")]
+        [HttpGet("Qualifications/{id}")]
         public async Task<IActionResult> GetQualificationById(int id)
         {
             var qualification = await _unitOfWork.QualificationsRepository.GetById(id);
@@ -52,17 +52,17 @@ namespace StudentWebApi.Controllers
             {
                 return Ok(qualification);
             }
-            return StatusCode(404, "Student does not exist");
+            return StatusCode(404, "Qualification does not exist");
         }
 
-        [HttpPut("Hobbies{id}")]
+        [HttpPut("Qualifications/{id}")]
         public async Task<IActionResult> UpdateQualification(int id,QualificationDTO qualification )
         {
             //var existqualification = await _unitOfWork.HobbiesRepository.GetById(id);
             var existQual = await _context.Qualifications.FindAsync(id);
             if (existQual != null)
             {
-                return StatusCode(404, "Hobbie does not exist");
+                return StatusCode(404, "Qualification does not exist");
             }
             if (ModelState.IsValid)
             {
@@ -74,7 +74,7 @@ namespace StudentWebApi.Controllers
             return StatusCode(400, "Invalid data");
         }
 
-        [HttpDelete("Hobbies{id}")]
+        [HttpDelete("Qualifications/{id}")]
         public async Task<IActionResult> DeleteQualification(int id)
         {
             var qualification = await _unitOfWork.QualificationsRepository.GetById(id);

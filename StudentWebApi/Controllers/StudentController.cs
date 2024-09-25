@@ -11,22 +11,21 @@ namespace StudentWebApi.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-       
+
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public StudentController(IUnitOfWork unitOfWork,IMapper mapper)
+        public StudentController(IUnitOfWork unitOfWork, IMapper mapper)
         {
 
-            _unitOfWork = unitOfWork;   
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
-           
+
 
         }
-       
+
         [HttpGet]
         public async Task<IActionResult> GetAllStudent()
         {
-            
             var getStudent = await _unitOfWork.StudentDetailsRepository.GetAll();
             if (getStudent != null)
             {
@@ -41,7 +40,7 @@ namespace StudentWebApi.Controllers
         public async Task<IActionResult> GetStudentById(int studentId)
         {
             //var getStudentById = _studentInterface.GetStudentById(studentId);
-            var getStudentById=await _unitOfWork.StudentDetailsRepository.GetById(studentId);
+            var getStudentById = await _unitOfWork.StudentDetailsRepository.GetById(studentId);
             if (getStudentById != null)
             {
                 return Ok(getStudentById);
@@ -50,13 +49,13 @@ namespace StudentWebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Addstudent(StudentDetailsDTO studentDto)
+        public async Task<IActionResult> Addstudent([FromBody] StudentDetailsDTO studentDto)
         {
             if (studentDto != null)
             {
 
                 //_studentInterface.AddStudent(student);
-                var student= _mapper.Map<StudentDetails>(studentDto);
+                var student = _mapper.Map<StudentDetails>(studentDto);
                 await _unitOfWork.StudentDetailsRepository.AddAsync(student);
                 return StatusCode(201, "Student Successfully created");
             }
@@ -65,14 +64,14 @@ namespace StudentWebApi.Controllers
         }
 
         [HttpPut("Student/{Id}")]
-        public async Task<IActionResult>  UpdateStudent(int Id, StudentDetailsDTO studentDto)
+        public async Task<IActionResult> UpdateStudent(int Id, StudentDetailsDTO studentDto)
         {
             if (studentDto != null)
             {
 
                 //var existStudent = await _studentInterface.GetStudentById(Id);
-              
-                var existStudent= await _unitOfWork.StudentDetailsRepository.GetById(Id);
+
+                var existStudent = await _unitOfWork.StudentDetailsRepository.GetById(Id);
                 if (existStudent != null)
                 {
                     existStudent.Address = studentDto.Address;
@@ -80,7 +79,7 @@ namespace StudentWebApi.Controllers
                     existStudent.State = studentDto.State;
                     existStudent.DateOfBirth = studentDto.DateOfBirth;
                     existStudent.MobileNumber = studentDto.MobileNumber;
-                    existStudent.Gender = studentDto.Gender;
+                    //existStudent.Gender = studentDto.Gender;
                     existStudent.FirstName = studentDto.FirstName;
                     existStudent.LastName = studentDto.LastName;
                     existStudent.CourseID = studentDto.CourseID;
@@ -107,17 +106,17 @@ namespace StudentWebApi.Controllers
         public async Task<IActionResult> DeleteStudent(int Id)
         {
             //var student= _studentInterface.GetStudentById(Id);
-            var student= await _unitOfWork.StudentDetailsRepository.GetById(Id);
+            var student = await _unitOfWork.StudentDetailsRepository.GetById(Id);
             if (student != null)
             {
-                
+
                 await _unitOfWork.StudentDetailsRepository.DeleteAsync(student);
-                return StatusCode(204,"Student Successfully Deleted");
+                return StatusCode(204, "Student Successfully Deleted");
             }
             return StatusCode(404, "No Data found");
         }
 
-    
+
 
     }
 }

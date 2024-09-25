@@ -16,6 +16,8 @@ namespace Student.Infrastructure
         public DbSet<StudentDetails> StudentDetails { get; set; }
 
         
+
+        
     }
 }
     

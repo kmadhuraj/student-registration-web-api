@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LSO6rp/VgMVPRTPlrE3KNJslmaB9prVB0oJCqAisOg8ZNEfzj5iFvD/BYBH+6OdBNDOBAb9yEaaPjZMySZx/CA==",
+  "dgSpecHash": "bd8XrZgll8TPi+9dDmuUtOSQakmd5i5fZHQHmwvSvgZBHrBe3wS8EhZsTNyaRQyUDzJGw/w+5VDXE8b8uo8e5g==",
   "success": true,
-  "projectFilePath": "D:\\dummy mvc\\StudentWebApi\\StudentWebApi.csproj",
+  "projectFilePath": "D:\\StudentApiCleanArch\\StudentWebApi\\StudentWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\madhurajk\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\madhurajk\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

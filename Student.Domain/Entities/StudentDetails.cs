@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace Student.Domain.Entities
 {
+    public enum Gender
+    {
+        Male,
+        Female
+    }
     public class StudentDetails
     {
         [Key]
@@ -27,7 +32,8 @@ namespace Student.Domain.Entities
         public string EmailD { get; set; }
         public int MobileNumber { get; set; }
 
-        public string Gender { get; set; }
+        //public string Gender { get; set; }
+        public  Gender Gender { get; set; }
 
         public string Address { get; set; }
 
@@ -41,8 +47,10 @@ namespace Student.Domain.Entities
         [MaxLength(50)]
         public string Country { get; set; }
 
-        [ForeignKey(nameof(Courses))]
         public int CourseID { get; set; }
+        [ForeignKey(nameof(CourseID))]
+        public Courses Courses { get; set; }
+
 
         //to add navigation to the courses
         //public Courses Courses { get; set; }

@@ -27,8 +27,24 @@
   },
   {
     "ContainingType": "StudentWebApi.Controllers.CoursesController",
+    "Method": "DeleteCourse",
+    "RelativePath": "api/Courses/Courses{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.CoursesController",
     "Method": "GetCourseById",
-    "RelativePath": "api/Courses/Courses {id}",
+    "RelativePath": "api/Courses/Courses/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +60,7 @@
   {
     "ContainingType": "StudentWebApi.Controllers.CoursesController",
     "Method": "UpdateCourse",
-    "RelativePath": "api/Courses/Courses{id}",
+    "RelativePath": "api/Courses/Courses/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +79,151 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "StudentWebApi.Controllers.CoursesController",
-    "Method": "DeleteCourse",
-    "RelativePath": "api/Courses/Courses{id}",
+    "ContainingType": "StudentWebApi.Controllers.HobbiesController",
+    "Method": "AddHobbies",
+    "RelativePath": "api/Hobbies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hobby",
+        "Type": "Student.Domain.Entities.Hobbies",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.HobbiesController",
+    "Method": "GetAllHobbbies",
+    "RelativePath": "api/Hobbies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.HobbiesController",
+    "Method": "GetHobbiesById",
+    "RelativePath": "api/Hobbies/Hobbies{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.HobbiesController",
+    "Method": "UpdateHobbies",
+    "RelativePath": "api/Hobbies/Hobbies{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "hobbie",
+        "Type": "Student.Domain.Entities.Hobbies",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.HobbiesController",
+    "Method": "DeleteHobbie",
+    "RelativePath": "api/Hobbies/Hobbies{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.QualificationsControlller",
+    "Method": "AddQualification",
+    "RelativePath": "api/QualificationsControlller",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "qualifications",
+        "Type": "Student.Domain.Entities.Qualifications",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.QualificationsControlller",
+    "Method": "GetAllQualification",
+    "RelativePath": "api/QualificationsControlller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.QualificationsControlller",
+    "Method": "GetQualificationById",
+    "RelativePath": "api/QualificationsControlller/Qualifications/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.QualificationsControlller",
+    "Method": "UpdateQualification",
+    "RelativePath": "api/QualificationsControlller/Qualifications/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "qualification",
+        "Type": "StudentWebApi.DTOs.QualificationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.QualificationsControlller",
+    "Method": "DeleteQualification",
+    "RelativePath": "api/QualificationsControlller/Qualifications/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -155,6 +313,111 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentHobbiesController",
+    "Method": "AddStudentHobbies",
+    "RelativePath": "api/StudentHobbies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hobby",
+        "Type": "StudentWebApi.DTOs.StudentHobbiesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentHobbiesController",
+    "Method": "GetAllStudentHobbbies",
+    "RelativePath": "api/StudentHobbies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentHobbiesController",
+    "Method": "GetHobbiesById",
+    "RelativePath": "api/StudentHobbies/StudentHobbies{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentHobbiesController",
+    "Method": "UpdateHobbies",
+    "RelativePath": "api/StudentHobbies/StudentHobbies{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "hobbie",
+        "Type": "StudentWebApi.DTOs.StudentHobbiesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentHobbiesController",
+    "Method": "DeleteHobbie",
+    "RelativePath": "api/StudentHobbies/StudentHobbies{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentRegisterController",
+    "Method": "CreateStudent",
+    "RelativePath": "api/StudentRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StudentReg",
+        "Type": "StudentWebApi.DTOs.StudentRegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentWebApi.Controllers.StudentRegisterController",
+    "Method": "GetRegister",
+    "RelativePath": "api/StudentRegister",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

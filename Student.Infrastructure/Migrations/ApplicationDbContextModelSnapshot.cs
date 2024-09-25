@@ -115,6 +115,8 @@ namespace Student.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("StudentID");
+
                     b.ToTable("Qualifications");
                 });
 
@@ -156,9 +158,8 @@ namespace Student.Infrastructure.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -177,6 +178,8 @@ namespace Student.Infrastructure.Migrations
                         .HasColumnType("nvarchar(30)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("CourseID");
 
                     b.ToTable("StudentDetails");
                 });
@@ -199,7 +202,42 @@ namespace Student.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("StudentID");
+
                     b.ToTable("StudentHobbies");
+                });
+
+            modelBuilder.Entity("Student.Domain.Entities.Qualifications", b =>
+                {
+                    b.HasOne("Student.Domain.Entities.StudentDetails", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("Student.Domain.Entities.StudentDetails", b =>
+                {
+                    b.HasOne("Student.Domain.Entities.Courses", "Courses")
+                        .WithMany()
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Courses");
+                });
+
+            modelBuilder.Entity("Student.Domain.Entities.StudentHobbies", b =>
+                {
+                    b.HasOne("Student.Domain.Entities.StudentDetails", "StudentDetail")
+                        .WithMany()
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StudentDetail");
                 });
 #pragma warning restore 612, 618
         }

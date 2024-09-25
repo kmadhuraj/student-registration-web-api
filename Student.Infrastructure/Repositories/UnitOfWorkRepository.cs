@@ -20,6 +20,7 @@ namespace Student.Infrastructure.Repositories
             StudentHobbiesRepository=new EntityFrameworkRepository<StudentHobbies>(context);
             QualificationsRepository=new EntityFrameworkRepository<Qualifications>(context);
             HobbiesRepository=new EntityFrameworkRepository<Hobbies>(context);
+            //StudentRegisterRepository = new EntityFrameworkRepository<StudentRegister>(context);
 
         }
         public IRepository<Courses> CourseRepository { get; set; }
@@ -28,7 +29,8 @@ namespace Student.Infrastructure.Repositories
         public IRepository<Qualifications> QualificationsRepository { get;  set; }
         public IRepository<Hobbies> HobbiesRepository { get;  set; }
 
-        
+        //public IRepository<StudentRegister> StudentRegisterRepository { get; set; }
+
     }
     
 }

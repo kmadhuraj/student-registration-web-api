@@ -43,7 +43,7 @@ namespace StudentWebApi.Controllers
 
 
         }
-        [HttpGet("Courses {id}")]
+        [HttpGet("Courses/{id}")]
         public async Task<IActionResult> GetCourseById(int id) {
             var course=await _unitOfWork.CourseRepository.GetById(id);
             if(course != null)
@@ -53,7 +53,7 @@ namespace StudentWebApi.Controllers
             return StatusCode(404, "Student does not exist");
         }
 
-        [HttpPut("Courses{id}")]
+        [HttpPut("Courses/{id}")]
         public async Task<IActionResult> UpdateCourse(int id,Courses course)
         {
             if (!ModelState.IsValid)

@@ -13,3 +13,19 @@ D:\dummy mvc\Student.Application\obj\Debug\net8.0\Student.Application.dll
 D:\dummy mvc\Student.Application\obj\Debug\net8.0\refint\Student.Application.dll
 D:\dummy mvc\Student.Application\obj\Debug\net8.0\Student.Application.pdb
 D:\dummy mvc\Student.Application\obj\Debug\net8.0\ref\Student.Application.dll
+D:\StudentApiCleanArch\Student.Application\bin\Debug\net8.0\Student.Application.deps.json
+D:\StudentApiCleanArch\Student.Application\bin\Debug\net8.0\Student.Application.dll
+D:\StudentApiCleanArch\Student.Application\bin\Debug\net8.0\Student.Application.pdb
+D:\StudentApiCleanArch\Student.Application\bin\Debug\net8.0\Student.Domain.dll
+D:\StudentApiCleanArch\Student.Application\bin\Debug\net8.0\Student.Domain.pdb
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.csproj.AssemblyReference.cache
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.AssemblyInfoInputs.cache
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.AssemblyInfo.cs
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.csproj.CoreCompileInputs.cache
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.sourcelink.json
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student..D85CCAC7.Up2Date
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.dll
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\refint\Student.Application.dll
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\Student.Application.pdb
+D:\StudentApiCleanArch\Student.Application\obj\Debug\net8.0\ref\Student.Application.dll

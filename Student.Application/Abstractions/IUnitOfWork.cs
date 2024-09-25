@@ -15,5 +15,6 @@ namespace Student.Application.Abstractions
         IRepository<Qualifications> QualificationsRepository { get; set;}
         IRepository<Hobbies> HobbiesRepository { get; set;}
 
+        //IRepository<StudentRegister> StudentRegisterRepository { get; set;}
     }
 }

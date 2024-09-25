@@ -13,11 +13,10 @@ namespace Student.Domain.Entities
         [Key]
         public int ID { get; set; }
 
-        [ForeignKey(nameof(StudentDetails))]
         public int StudentID { get; set; }
 
-        //navigation
-       // public StudentDetails Student { get; set; }  
+        [ForeignKey(nameof(StudentID))]
+        public StudentDetails Student { get; set; }  
 
         [MaxLength(50)]
         public string ClassXBoard { get; set; }

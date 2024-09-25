@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dummy mvc\\Student.Application\\Student.Application.csproj": {}
+    "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj": {}
   },
   "projects": {
-    "D:\\dummy mvc\\Student.Application\\Student.Application.csproj": {
+    "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dummy mvc\\Student.Application\\Student.Application.csproj",
+        "projectUniqueName": "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj",
         "projectName": "Student.Application",
-        "projectPath": "D:\\dummy mvc\\Student.Application\\Student.Application.csproj",
+        "projectPath": "D:\\StudentApiCleanArch\\Student.Application\\Student.Application.csproj",
         "packagesPath": "C:\\Users\\madhurajk\\.nuget\\packages\\",
-        "outputPath": "D:\\dummy mvc\\Student.Application\\obj\\",
+        "outputPath": "D:\\StudentApiCleanArch\\Student.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\madhurajk\\AppData\\Roaming\\NuGet\\NuGet.Config",
