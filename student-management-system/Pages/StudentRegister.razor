@@ -1,0 +1,317 @@
+﻿@page "/register"
+
+@inject HttpClient httpClient
+@using student_management_system.Data
+@using student_management_system.Services
+
+<h3>Student</h3>
+<EditForm FormName="Uniquename" Model="@newStudent" OnValidSubmit="HandleSubmit">
+
+    <div class="d-flex flex-column gap-5">
+        <div class="d-flex gap-3">
+            <div>
+                <label for="firstname" class="form-label">First Name</label>
+                <InputText id="firstname" @bind-Value="newStudent.FirstName" class="form-control" />
+            </div>
+
+            <div>
+                <label for="lasttname" class="form-label">Last Name</label>
+                <InputText id="lastname" @bind-Value="newStudent.LastName" class="form-control" />
+            </div>
+
+            <div>
+                <label for="dob" class="form-label">DOB</label>
+                <input type="date" id="dob" @bind-value="newStudent.DateOfBirth" class="form-control" />
+            </div>
+
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <InputText id="email" @bind-Value="newStudent.EmailD" class="form-control" />
+            </div>
+
+            <div>
+                <label for="mobile" class="form-label">Mobile</label>
+                <InputNumber id="mobile" @bind-Value="newStudent.MobileNumber" class="form-control" />
+            </div>
+
+            <div>
+                <label for="gender" class="form-label">Gender</label>
+                <InputText id="gender" @bind-Value="newStudent.Gender" class="form-control" />
+            </div>
+
+        </div>
+
+
+        <div class="d-flex gap-3">
+
+
+            <div>
+                <label for="address" class="form-label">Address</label>
+                <InputText id="address" @bind-Value="newStudent.Address" class="form-control" />
+            </div>
+
+            <div>
+                <label for="city" class="form-label">City</label>
+                <InputText id="city" @bind-Value="newStudent.City" class="form-control" />
+            </div>
+
+            <div>
+                <label for="pincode" class="form-label">Pincode</label>
+                <InputNumber id="pincode" @bind-Value="newStudent.Pincode" class="form-control" />
+
+            </div>
+
+            <div>
+                <label for="state" class="form-label">State</label>
+                <InputText id="state" @bind-Value="newStudent.State" class="form-control" />
+            </div>
+
+            <div>
+                <label for="country" class="form-label">Country</label>
+                <InputText id="country" @bind-Value="newStudent.Country" class="form-control" />
+            </div>
+
+            <div>
+                <label for="course-id" class="form-label">Course ID</label>
+                <InputNumber id="course-id" @bind-Value="newStudent.CourseID" class="form-control" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="d-flex gap-3">
+        <button type="submit" class="btn btn-dark mt-3" @onclick="()=>isUpdate=true">Add</button>
+        <button type="submit" class="btn btn-primary mt-3" @onclick="()=>isUpdate=false">Update</button>
+    </div>
+
+    @*  adding message *@
+    @if (_hideMessage.SuccessMessage != null)
+    {
+        <p class="text-success mt-2  ">@_hideMessage.SuccessMessage</p>
+    }
+    else
+    {
+        <p class="text-danger mt-2">@_hideMessage.ErrorMessage</p>
+    }
+
+    @* deleting message *@
+    @if (_hideMessage.Message != null)
+    {
+        <p class="text-success">@_hideMessage.Message</p>
+    }
+    else
+    {
+        <p class="text-danger">@_hideMessage.Message</p>
+    }
+
+    @*  updating message *@
+    @if (_hideMessage.UpdateSuccessMessage != null)
+    {
+        <p class="text-success mt-3 ">@_hideMessage.UpdateSuccessMessage</p>
+    }
+    else
+    {
+        <p class="text-danger mt-3">@_hideMessage.UpdateErrorMessage</p>
+    }
+
+</EditForm>
+
+
+<table class="table table-dark table-hover table-responsive">
+    <thead>
+
+        <tr class="col">
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Gender</th>
+            <th scope="col">City</th>
+            <th scope="col">Pin code</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Course ID </th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in students)
+        {
+            <tr class="col">
+
+                <td>@student.ID</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.DateOfBirth</td>
+                <td class="row">@student.EmailD</td>
+                <td>@student.MobileNumber</td>
+                <td>@student.Address</td>
+                <td>@student.Gender</td>
+                <td>@student.City</td>
+                <td>@student.Pincode</td>
+                <td>@student.State</td>
+                <td>@student.Country</td>
+                <td>@student.CourseID</td>
+                <td><button class="btn btn-primary" @onclick="()=>LoadAsync(student.ID)">Edit</button></td>
+                <td><button class="btn btn-danger" @onclick="()=>DeleteAsync(student.ID)">Delete</button></td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    //to make decission Update/Add
+    private bool isUpdate;
+    private async Task HandleSubmit()
+    {
+        if (isUpdate)
+        {
+            await AddAsync();
+        }
+        else
+        {
+            await UpdateAsync();
+        }
+    }
+
+    private List<StudentModel> students = new();
+    private bool isLoading = true;
+    private HideMessagesAfterDelay _hideMessage = new();
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            students = await httpClient.GetFromJsonAsync<List<StudentModel>>("api/Student");
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            //to hide the messages
+            _hideMessage.HideMessageAfterDelay(5000);
+            //HiddenMessageAsync();
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private StudentModel newStudent = new();
+    public async Task AddAsync()
+    {
+        _hideMessage.SuccessMessage = null;
+        _hideMessage.ErrorMessage = null;
+        try
+        {
+            //var jsonStudent = Newtonsoft.Json.JsonConvert.SerializeObject(newStudent);
+            var response = await httpClient.PostAsJsonAsync("api/Student", newStudent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                _hideMessage.SuccessMessage = "Student added successfully";
+                Console.WriteLine("Student added successfully");
+                //to hide the message
+                _hideMessage.HideMessageAfterDelay(5000);
+
+
+                // Optionally, reload the courses list
+                students = await httpClient.GetFromJsonAsync<List<StudentModel>>("api/Student");
+            }
+            else
+            {
+                _hideMessage.ErrorMessage = "Failed to add the student.";
+                Console.WriteLine("Failed to add the student.");
+                _hideMessage.HideMessageAfterDelay(5000);
+            }
+        }
+        catch (Exception ex)
+        {
+            _hideMessage.ErrorMessage = "An error occurred while adding the student: " + ex.Message;
+            Console.WriteLine($"An error occurred while adding the student: {ex.Message}");
+            _hideMessage.HideMessageAfterDelay(5000);
+        }
+    }
+
+
+    public async Task DeleteAsync(int id)
+    {
+        try
+        {
+            _hideMessage.Message = null;
+            var response = await httpClient.DeleteAsync($"api/Student/Student/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("deleted");
+                _hideMessage.Message = "Student deleted Successfully";
+                _hideMessage.HideMessageAfterDelay(5000);
+
+                //to reload
+                students = await httpClient.GetFromJsonAsync<List<StudentModel>>("api/Student");
+
+
+            }
+            else
+            {
+                Console.WriteLine("deletion failed");
+                _hideMessage.Message = "Cant delete the Student";
+                _hideMessage.HideMessageAfterDelay(5000);
+                //HiddenMessageAsync();
+            }
+        }
+        catch
+        {
+            Console.WriteLine("an error occured");
+            _hideMessage.HideMessageAfterDelay(5000);
+            // HiddenMessageAsync();
+        }
+    }
+
+    private StudentModel updateStudent = new();
+    public async Task LoadAsync(int id)
+    {
+        try
+        {
+            newStudent = await httpClient.GetFromJsonAsync<StudentModel>($"api/Student/Student/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            _hideMessage.HideMessageAfterDelay(5000);
+
+        }
+    }
+    public async Task UpdateAsync()
+    {
+        _hideMessage.UpdateSuccessMessage = null;
+        _hideMessage.UpdateErrorMessage = null;
+        var response = await httpClient.PutAsJsonAsync($"api/Student/Student/{newStudent.ID}", newStudent);
+        if (response.IsSuccessStatusCode)
+        {
+            //to reload and get data
+            students = await httpClient.GetFromJsonAsync<List<StudentModel>>("api/Student");
+            _hideMessage.UpdateSuccessMessage = "Student updated Successfully";
+            Console.WriteLine("updated");
+            _hideMessage.HideMessageAfterDelay(5000);
+
+        }
+        else
+        {
+            _hideMessage.UpdateErrorMessage = "Student updation failed";
+            Console.WriteLine("updatation failed");
+            _hideMessage.HideMessageAfterDelay(5000);
+        }
+
+    }
+
+
+}

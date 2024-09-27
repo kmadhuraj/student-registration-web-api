@@ -1,0 +1,252 @@
+﻿@page "/studentReg"
+
+@using student_management_system.Data;
+@inject HttpClient httpClient;
+@using student_management_system.Services;
+
+<h3>StudentRegistration</h3>
+
+@* for showing the messages *@
+@if (_hideMessage.SuccessMessage!=null){
+    <p class="text-success">@_hideMessage.SuccessMessage</p>
+}
+@if(_hideMessage.ErrorMessage!=null)
+{
+    <p class="text-danger">@_hideMessage.ErrorMessage</p>
+}
+
+<EditForm Model="register" OnValidSubmit="SubmitForm">
+    <DataAnnotationsValidator />
+    
+
+    <div class="d-flex flex-column gap-3">
+            <div class="d-flex gap-3"> 
+                <div class="form-group">
+                    <label for="firstname" class="form-name">First Name</label>
+                    <input type="text" @bind="register.FirstName" id="firstname" class="form-control">
+                    <ValidationMessage For="() => register.FirstName" />
+                </div>
+
+                <div>
+                    <label for="lastname" class="form-name">Last Name</label>
+                    <input type="text" @bind="register.LastName" id="lastname" class="form-control" />
+                    <ValidationMessage For="() => register.LastName" />
+                </div>
+
+                <div>
+                    <label for="dob" class="form-name">DOB</label>
+                    <input type="date" @bind="register.DateOfBirth" id="dob" class="form-control" />
+                    <ValidationMessage For="() => register.DateOfBirth" />    
+                </div>
+
+                <div>
+                    <label for="email" class="form-name">Email </label>
+                    <input type="email" @bind="register.EmailD" id="email" class="form-control" />
+                    <ValidationMessage For="() => register.EmailD" />        
+                </div>
+
+                <div>
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="number" @bind="register.MobileNumber" id="mobile" class="form-control" />
+                    <ValidationMessage For="() => register.MobileNumber" />
+                </div>
+
+            </div>
+
+            <div>
+                <label  class="form-name">Gender</label>
+            <InputRadioGroup @bind-Value="register.Gender">
+
+                <label for="male" class="form-label">Male</label>
+                <InputRadio Value="0"  id="male" class="form-radio" />
+
+                <label  for="female" class="form-label">Female</label>
+                <InputRadio id="female" Value="1" class="form-radio" />
+            </InputRadioGroup>
+            </div>
+
+            <div class="d-flex gap-3">
+                    <div>
+                        <label for="address" class="form-name">Address</label>
+                        <input type="text" id="address" @bind="register.Address" class="form-control" />
+                        <ValidationMessage For="() => register.Address" />
+                    </div>
+
+                    <div>
+                        <label for="city" class="form-name">City</label>
+                        <input type="text" @bind="register.City" id="city" class="form-control" />
+                        <ValidationMessage For="() => register.City" />
+                    </div>
+
+                    <div>
+                        <label for="pincode" class="form-name">Pin Code</label>
+                        <input type="number" id="pincode" @bind="register.Pincode" class="form-control" />
+                        <ValidationMessage For="() => register.Pincode" />
+                    </div>
+
+                    <div>
+                        <label for="state" class="form-name">State</label>
+                        <input type="text" id="state" @bind="register.State" class="form-control" />
+                        <ValidationMessage For="() => register.State" />
+                    </div>
+
+                    <div>
+                        <label for="country" class="form-name">Country</label>
+                        <input type="text" id="country" @bind="register.Country" class="form-control" />
+                         <ValidationMessage For="() => register.Country" />
+                    </div>
+            </div>
+        </div>
+
+    <h5 class="mt-5">Hobbies</h5>
+    <div class="d-flex gap-3">
+       
+        @foreach (var hobby in availableHobbies)
+        {
+            <label for="@hobby.Hobbie">@hobby.Hobbie</label>
+            <input type="checkbox" @bind="hobby.IsSelected" id="@hobby.Hobbie" class="form-check" />
+        }
+    </div>
+
+
+    <h5 class="mt-5">Qualifications</h5>
+    
+    <div class="d-flex gap-3">
+     
+        <div class="d-flex flex-column gap-2 ">
+            <label class="form-label ">Examination</label>
+            <label class="form-label mt-2 ">Class X</label>
+            <label class="form-label mt-2">Class X11</label>
+            <label class="form-label mt-2">Graduation</label>
+            <label class="form-label mt-2">Masters</label>
+
+        </div>
+        <div class="d-flex flex-column gap-2 ">
+            <label class="form-label mx-5">Board</label>
+            <input id="clasx" @bind="register.ClassXBoard" class="form-control" />
+            <ValidationMessage For="() => register.ClassXBoard" />
+            <input id="clasx11" @bind="register.ClassX11Board" class=" form-control" />
+            <ValidationMessage For="() => register.ClassX11Board" />
+            <input id="graduation" @bind="register.GraduationBoard" class="form-control" />
+            <ValidationMessage For="() => register.GraduationBoard" />
+            <input id="masters" @bind="register.MastersBoard" class="form-control" />
+            <ValidationMessage For="() => register.MastersBoard" />
+        </div>
+
+        <div class="d-flex flex-column gap-2 ">
+            <label class="form-label mx-5">Percentage</label>
+
+            <input type="number" @bind="register.ClassXPercentage" id="clasx-percent" class="form-control" />
+            <ValidationMessage For="() =>register.ClassXPercentage" />
+
+
+            <input type="number" @bind="register.Class11Percentage" id="clasx11-percent" class="form-control" />
+            <ValidationMessage For="() => register.Class11Percentage" />
+
+
+            <input type="number" @bind="register.GraduationPercentage" id="graduation-percent" class="form-control" />
+            <ValidationMessage For="() => register.GraduationPercentage" />
+
+
+            <input type="number" @bind="register.MastersPercentage" id="masters-percent" class="form-control" />
+            <ValidationMessage For="() => register.MastersPercentage" />
+        </div>
+
+        <div class="d-flex flex-column gap-2 ">
+            <label class="form-label mx-5">Year of Passing </label>
+            <input type="number" @bind="register.ClassXYearOfPassing" id="clasx-year" class="form-control" />
+            <ValidationMessage For="() => register.ClassXYearOfPassing" />
+            <input type="number" @bind="register.ClassX11YearOfPassing" id="clasx11-year" class="form-control" />
+            <ValidationMessage For="() => register.ClassX11YearOfPassing" />
+            <input type="number" @bind="register.GraduationYearOfPasssing" id="graduation-year" class="form-control" />
+            <ValidationMessage For="() => register.GraduationYearOfPasssing" />
+            <input type="number" @bind="register.MastersYearOfPasssing" id="masters-year" class="form-control" />
+            <ValidationMessage For="() => register.MastersYearOfPasssing" />
+        </div>
+    </div>
+
+    <div class="mt-5">
+
+        <h5>Course Applied for</h5>
+       
+        <div class="d-flex gap-3">
+        
+            @foreach (var course in availableCourses)
+            {
+                <label for="@course.CourseName">@course.CourseName</label>
+                <input id="@course.CourseName" type="checkbox" @bind="course.IsSelected" class="form-checkbox" />
+            }
+        </div>
+    </div>
+
+
+    <div class=" d-flex justify-content-center btn-container mt-5 gap-5">
+        <button class="btn btn-primary" @onclick="SubmitForm">Submit</button>
+        @* <button class="btn btn-secondary" @onclick="ResetForm">Reset</button> *@
+    </div>
+    
+</EditForm>
+
+@code {
+    public student_management_system.Data.StudentRegistration register = new();
+    public List<StudentHobbies> availableHobbies = new List<StudentHobbies>();
+    public List<CoursesModel> availableCourses = new List<CoursesModel>();
+
+    public student_management_system.Data.CoursesModel courses = new();
+
+    private HideMessagesAfterDelay _hideMessage = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadHobbiesAsync(); // Load the hobbies when the page is initialized
+        await LoadCourseAsync();//Load the course when page is initialised
+
+    }
+    public async Task LoadCourseAsync()
+    {
+        try
+        {
+            availableCourses = await httpClient.GetFromJsonAsync<List<CoursesModel>>($"api/Courses");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+
+        }
+    }
+    public async Task LoadHobbiesAsync()
+    {
+        try
+        {
+            availableHobbies = await httpClient.GetFromJsonAsync<List<StudentHobbies>>($"api/Hobbies");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+
+
+
+    public async Task SubmitForm()
+    {
+        register.CourseID = availableCourses.Where(c => c.IsSelected).Select(c => c.CourseId).FirstOrDefault();
+        register.Hobbies = availableHobbies.Where(h => h.IsSelected).ToList();
+        var response = await httpClient.PostAsJsonAsync("api/StudentRegister", register);
+        if (response.IsSuccessStatusCode)
+        {
+            _hideMessage.SuccessMessage = "Student Registration Successfull";
+            register = new Data.StudentRegistration();
+            Console.WriteLine("Data added");
+            _hideMessage.HideMessageAfterDelay(5000);
+        }
+        else
+        {
+            _hideMessage.ErrorMessage = "Bad Request";
+        }
+
+    }   
+
+    }
+    
+

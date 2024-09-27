@@ -1,0 +1,87 @@
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\appsettings.Development.json
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\appsettings.json
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.staticwebassets.runtime.json
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.exe
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.deps.json
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.runtimeconfig.json
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.dll
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\student-management-system.pdb
+D:\Student Front End Blazor\student-management-system\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.csproj.AssemblyReference.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.GeneratedMSBuildEditorConfig.editorconfig
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.AssemblyInfoInputs.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.AssemblyInfo.cs
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.csproj.CoreCompileInputs.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.MvcApplicationPartsAssemblyInfo.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.RazorAssemblyInfo.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.RazorAssemblyInfo.cs
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets.build.json
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets.development.json
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.student-management-system.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.build.student-management-system.props
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.student-management-system.props
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.student-management-system.props
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\scopedcss\bundle\student-management-system.styles.css
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\scopedcss\projectbundle\student-management-system.bundle.scp.css
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-.54E4B6E7.Up2Date
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.dll
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\refint\student-management-system.dll
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.pdb
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\student-management-system.genruntimeconfig.cache
+D:\Student Front End Blazor\student-management-system\obj\Debug\net6.0\ref\student-management-system.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\appsettings.Development.json
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\appsettings.json
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.staticwebassets.runtime.json
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.exe
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.deps.json
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.runtimeconfig.json
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\student-management-system.pdb
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.csproj.AssemblyReference.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.GeneratedMSBuildEditorConfig.editorconfig
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.AssemblyInfoInputs.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.AssemblyInfo.cs
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.csproj.CoreCompileInputs.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.MvcApplicationPartsAssemblyInfo.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.RazorAssemblyInfo.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.RazorAssemblyInfo.cs
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets.build.json
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets.development.json
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.student-management-system.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.build.student-management-system.props
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.student-management-system.props
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.student-management-system.props
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\scopedcss\bundle\student-management-system.styles.css
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\scopedcss\projectbundle\student-management-system.bundle.scp.css
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-.54E4B6E7.Up2Date
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.dll
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\refint\student-management-system.dll
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.pdb
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\student-management-system.genruntimeconfig.cache
+D:\Student-management-system-blazor-front-end\student-management-system\obj\Debug\net6.0\ref\student-management-system.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Blazored.SessionStorage.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\IdentityModel.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Microsoft.JSInterop.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\System.IO.Pipelines.dll
+D:\Student-management-system-blazor-front-end\student-management-system\bin\Debug\net6.0\Blazored.LocalStorage.dll

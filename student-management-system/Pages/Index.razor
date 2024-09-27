@@ -1,0 +1,65 @@
+﻿@page "/"
+@inject HttpClient httpClient;
+@inject AuthenticationStateProvider AuthStateProvider
+@inject ILocalStorageService LocalStorage
+@inject IConfiguration Configuration
+@using Blazored.LocalStorage
+@using student_management_system.Data;
+@using Newtonsoft.Json;
+@using student_management_system.Services
+@inject NavigationManager Navigation
+@inject CustomAuthenticationStateProvider AuthStateProvider
+<PageTitle>Index</PageTitle>
+
+<EditForm Model="login" OnValidSubmit="Login">
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="username">Username</label>
+        <input type="text" @bind-value="login.Username" id="username" class="form-control" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="Email">Email</label>
+        <input @bind-value="login.Email" type="email" id="email" class="form-control" />
+    </div>
+
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="password">Password</label>
+        <input @bind-value="login.Password" type="password" id="password" class="form-control" />
+    </div>
+   
+    <!-- Submit button -->
+    <button type="button" data-mdb-button-init data-mdb-ripple-init @onclick="Login" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+    
+    
+</EditForm>
+
+
+
+@code{
+    private LoginModel login = new();
+
+
+    public async Task Login()
+    {
+        if (login == null)
+        {
+            Console.WriteLine("Bad request enter data");
+        }
+        var response = await httpClient.PostAsJsonAsync("api/Authentication",login);
+        if (response.IsSuccessStatusCode)
+        {
+           // var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AeW9wLmNvbSIsImV4cCI6MTcyNzMzNjk0NiwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0IHVybCJ9.PCw8JL6yshKNK-Uvjoi-mRSTBmjVzcdKjUfg4BEoK3M";
+            var TokenString = await response.Content.ReadFromJsonAsync<LoginResponse>();
+            await LocalStorage.SetItemAsync("token",TokenString);
+            await AuthStateProvider.GetAuthenticationStateAsync();
+            Navigation.NavigateTo("/home");
+        }
+        else
+        {
+            Console.WriteLine("Login Failure");
+        }
+    }
+}

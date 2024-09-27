@@ -1,0 +1,243 @@
+﻿@page "/courses"
+
+<h3>Courses</h3>
+
+@inject HttpClient httpClient
+@using student_management_system.Data
+
+<div>
+<EditForm FormName="UniqueFormName" Model="@newCourse" OnValidSubmit="AddCourseAsync">
+    <label for="courseName" class="form-label">Course Name</label>
+    <InputText id="courseName" @bind-Value="newCourse.CourseName" class="form-control w-25" />
+    <button type="submit" class="btn btn-dark mt-3">Add</button>
+    @if (successMessage != null)
+    {
+        <p class="text-success mt-2 ">@successMessage</p>
+    }
+   else
+   {
+        <p class="text-danger mt-2">@errorMessage</p>
+   }
+
+    @if (Message != null)
+    {
+        <p class="text-success">@Message</p>
+    }
+    else
+    {
+        <p class="text-danger">@Message</p>
+    }
+
+</EditForm>
+
+<EditForm FormName="updateForm" Model="updateCourse" OnValidSubmit="UpdateCourseAsync">
+    <label for="update" class="form-label">Course Name</label>
+    <InputText id="update" @bind-Value="updateCourse.CourseName" class="form-control w-25" />
+    <button type="submit" class="btn btn-dark mt-3">Update</button>
+</EditForm>
+@if (updateSuccessMessage != null)
+{
+    <p class="text-success mt-3 ">@updateSuccessMessage</p>
+}
+else
+{
+    <p class="text-danger mt-3">@updateErrorMessage</p>
+}
+@* @if (updateErrorMessage != null)
+{
+    <p class="text-success">@updateErrorMessage</p>
+}
+else
+{
+    <p class="text-danger">@updateErrorMessage</p>
+} *@
+
+
+<h3 class="mt-5">Courses</h3> 
+
+
+@if (isLoading)
+{
+    <p class="text-secondary">Loading...</p>
+}
+else
+{
+    @if (courses != null && courses.Any())
+    {
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Course Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in courses)
+                {
+                    <tr>
+                        <td>@course.CourseId </td>
+                        <td>@course.CourseName</td>
+                        <td class="d-flex justify-content-end">
+                            <button class="btn btn-primary mx-3" @onclick="()=>LoadCourseAsync(course.CourseId)">Edit </button>
+                            <button class="btn btn-danger" @onclick="()=>DeleteCourseAsync(course.CourseId)">Delete </button>
+                        
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No courses available.</p>
+    }
+}
+</div>
+@code {
+ 
+    private List<CoursesModel> courses = new List<CoursesModel>();
+    private CoursesModel newCourse = new CoursesModel();
+    private bool isLoading = true;
+    private string successMessage;
+    private string errorMessage;
+    private CoursesModel updateCourse = new CoursesModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            courses = await httpClient.GetFromJsonAsync<List<CoursesModel>>("api/Courses");
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    public async Task AddCourseAsync()
+    {
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await httpClient.PostAsJsonAsync("api/Courses", newCourse);
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Course added successfully";
+                Console.WriteLine("Course added successfully");
+                HideMessageAfterDelay();
+
+
+                // Reset the form
+                newCourse = new CoursesModel();
+
+                // Optionally, reload the courses list
+                courses = await httpClient.GetFromJsonAsync<List<CoursesModel>>("api/Courses");
+            }
+            else
+            {
+                errorMessage = "Failed to add the course.";
+                Console.WriteLine("Failed to add the course.");
+                HideMessageAfterDelay();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while adding the course: " + ex.Message;
+            Console.WriteLine($"An error occurred while adding the course: {ex.Message}");
+            HideMessageAfterDelay();
+        }
+    }
+
+
+    private string Message;
+
+    public async Task DeleteCourseAsync(int id)
+    {
+        try
+        {
+            Message = null;
+            var response = await httpClient.DeleteAsync($"api/Courses/Courses{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("deleted");
+                Message = "Course deleted Successfully";
+                HideMessageAfterDelay();
+                
+                //to reload
+                courses = await httpClient.GetFromJsonAsync<List<CoursesModel>>("api/Courses");
+
+            }
+            else
+            {
+                Console.WriteLine("deletion failed");
+                Message = "Cant delete the Course";
+                HideMessageAfterDelay();
+            }
+        }
+        catch
+        {
+            Console.WriteLine("an error occured");
+            
+        }
+    }
+    // Load the selected course details into the form
+    public async Task LoadCourseAsync(int id)
+    {
+        try
+        {
+            updateCourse = await httpClient.GetFromJsonAsync<CoursesModel>($"api/Courses/Courses/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            HideMessageAfterDelay();
+        }
+    }
+    private string updateSuccessMessage;
+    private string updateErrorMessage;
+
+    public async Task UpdateCourseAsync()
+    {
+        updateSuccessMessage = null;
+        updateErrorMessage = null;
+        var response = await httpClient.PutAsJsonAsync($"api/Courses/Courses/{updateCourse.CourseId}", updateCourse);
+        if (response.IsSuccessStatusCode)
+        {
+            //to reload and get data
+            courses = await httpClient.GetFromJsonAsync<List<CoursesModel>>("api/Courses");
+            updateSuccessMessage = "Course updated Successfully";
+            HideMessageAfterDelay();
+            Console.WriteLine("updated");
+        }
+        else
+        {
+            updateErrorMessage = "Course updation failed";
+            Console.WriteLine("updatation failed");
+            HideMessageAfterDelay();
+        }
+
+    }
+    //to hide the messages
+    public async Task HideMessageAfterDelay()
+    {
+        await Task.Delay(5000);
+        successMessage = null;
+        errorMessage = null;
+        updateSuccessMessage = null;
+        updateErrorMessage = null;
+        Message = null;
+        StateHasChanged();
+    }
+
+    
+}

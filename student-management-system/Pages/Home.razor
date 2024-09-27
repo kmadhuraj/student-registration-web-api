@@ -1,0 +1,10 @@
+﻿@page "/home"
+@inject CustomAuthenticationStateProvider AuthStateProvider
+@using student_management_system.Services
+
+<h3>Home</h3>
+
+<div>
+    
+    <p>Welcome, @AuthStateProvider.UserName</p>
+</div>

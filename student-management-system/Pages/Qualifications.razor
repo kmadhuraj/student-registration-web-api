@@ -1,0 +1,316 @@
+﻿@page "/qualifications"
+<h3>Qualifications</h3>
+@using student_management_system.Data;
+@using student_management_system.Services;
+@inject HttpClient httpClient;
+
+<EditForm Model="@newQualification" OnValidSubmit="HandleSubmit">
+ <div class="d-flex flex-column gap-5">
+
+ <div class="d-flex gap-3">
+
+    <div class="form-group">
+        <label for="classXBoard">Class X Board</label>
+        <InputText id="classXBoard" @bind-Value="newQualification.ClassXBoard" class="form-control " placeholder="Enter Class X Board" />
+    </div>
+
+    <div class="form-group">
+        <label for="classXPercentage">Class X Percentage</label>
+        <InputNumber id="classXPercentage" @bind-Value="newQualification.ClassXPercentage" class="form-control" step="0.01" placeholder="Enter Class X Percentage" />
+    </div>
+  
+    <div class="form-group">
+        <label for="classXYearOfPassing">Class X Year Of Passing</label>
+        <InputNumber id="classXYearOfPassing" @bind-Value="newQualification.ClassXYearOfPassing" class="form-control " placeholder="Enter Class X Year Of Passing" />
+    </div>
+
+
+    <div class="form-group">
+        <label for="classX11Board">Class X11 Board</label>
+        <InputText id="classX11Board" @bind-Value="newQualification.ClassX11Board" class="form-control " placeholder="Enter Class X11 Board" />
+    </div>
+
+    <div class="form-group">
+        <label for="class11Percentage">Class 11 Percentage</label>
+         <InputNumber id="class11Percentage" @bind-Value="newQualification.Class11Percentage" class="form-control" step="0.01" placeholder="Enter Class 11 Percentage" />
+    </div>
+
+    <div class="form-group">
+       <label for="classX11YearOfPassing">Class X11 Year Of Passing</label>
+       <InputNumber id="classX11YearOfPassing" @bind-Value="newQualification.ClassX11YearOfPassing" class="form-control " placeholder="Enter Class X11 Year Of Passing" />
+    </div>
+
+
+</div>
+
+  <div class="d-flex gap-3"> 
+
+    <div class="form-group">
+        <label for="graduationBoard">Graduation Board</label>
+        <InputText id="graduationBoard" @bind-Value="newQualification.GraduationBoard" class="form-control " placeholder="Enter Graduation Board" />
+    </div>
+
+    <div class="form-group">
+        <label for="graduationPercentage">Graduation Percentage</label>
+        <InputNumber id="graduationPercentage" @bind-Value="newQualification.GraduationPercentage" class="form-control " step="0.01" placeholder="Enter Graduation Percentage" />
+    </div>
+
+    <div class="form-group">
+        <label for="graduationYearOfPassing">Graduation Year Of Passing</label>
+        <InputNumber id="graduationYearOfPassing" @bind-Value="newQualification.GraduationYearOfPasssing" class="form-control " placeholder="Enter Graduation Year Of Passing" />
+    </div>
+
+    <div class="form-group">
+        <label for="mastersBoard">Masters Board</label>
+        <InputText id="mastersBoard" @bind-Value="newQualification.MastersBoard" class="form-control " placeholder="Enter Masters Board" />
+    </div>
+
+    <div class="form-group">
+        <label for="mastersPercentage">Masters Percentage</label>
+        <InputNumber id="mastersPercentage" @bind-Value="newQualification.MastersPercentage" class="form-control " step="0.01" placeholder="Enter Masters Percentage" />
+    </div>
+
+    <div class="form-group">
+        <label for="mastersYearOfPassing">Masters Year Of Passing</label>
+        <InputNumber id="mastersYearOfPassing" @bind-Value="newQualification.MastersYearOfPasssing" class="form-control" placeholder="Enter Masters Year Of Passing" />
+    </div>
+
+ </div>
+    
+ </div>
+    <button type="submit" class="btn btn-dark mt-3 " @onclick="()=>isUpdate=true">Add</button>
+    <button type="submit" class="btn btn-secondary mt-3" @onclick="()=>isUpdate=false">Update</button>
+</EditForm>
+
+
+@*  adding message *@
+@if (_hideMessage.SuccessMessage != null)
+{
+    <p class="text-success mt-2  ">@_hideMessage.SuccessMessage</p>
+}
+else
+{
+    <p class="text-danger mt-2">@_hideMessage.ErrorMessage</p>
+}
+
+@* deleting message *@
+@if (_hideMessage.Message != null)
+{
+    <p class="text-success">@_hideMessage.Message</p>
+}
+else
+{
+    <p class="text-danger">@_hideMessage.Message</p>
+}
+
+@*  updating message *@
+@if (_hideMessage.UpdateSuccessMessage != null)
+{
+    <p class="text-success mt-3 ">@_hideMessage.UpdateSuccessMessage</p>
+}
+else
+{
+    <p class="text-danger mt-3">@_hideMessage.UpdateErrorMessage</p>
+}
+<table class="table table-dark table-hover">
+    <thead>
+
+        <tr class="col">
+            <th scope="col">ID</th>
+            <th scope="col">Student ID</th>
+            <th scope="col">Class X Board</th>
+            <th scope="col">Class X Percentage</th>
+            <th scope="col">Class X Year Of Passing</th>
+            <th scope="col">Class X11 Board</th>
+            <th scope="col">Class 11 Percentage</th>
+            <th scope="col">Class X11 Year Of Passing</th>
+            <th scope="col">Graduation Board</th>
+            <th scope="col">Graduation Percentage</th>
+            <th scope="col">Graduation Year Of Passsing</th>
+            <th scope="col">Masters Board</th>
+            <th scope="col">Masters Percentage </th> 
+            <th scope="col">Masters Year Of Passsing </th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var qualification in qualifications)
+        {
+            <tr>
+                <td>@qualification.ID</td>
+                <td>@qualification.StudentID</td>
+                <td>@qualification.ClassXBoard</td>
+                <td>@qualification.ClassXPercentage</td>
+                <td>@qualification.ClassXYearOfPassing</td>
+                <td>@qualification.ClassX11Board</td>
+                <td>@qualification.Class11Percentage</td>
+                <td>@qualification.ClassX11YearOfPassing</td>
+                <td>@qualification.GraduationBoard</td>
+                <td>@qualification.GraduationPercentage</td>
+                <td>@(qualification.GraduationYearOfPasssing == 0 ? "N/A" : qualification.GraduationYearOfPasssing)</td> <!-- Handle 0 values -->
+                <td>@qualification.MastersBoard</td>
+                <td>@qualification.MastersPercentage</td>
+                <td>@(qualification.MastersYearOfPasssing == 0 ? "N/A" : qualification.MastersPercentage)</td> <!-- Handle 0 values -->
+                <td>
+                    <button class="btn btn-primary " @onclick="()=>LoadAsync(qualification.ID)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" @onclick="()=>DeleteAsync(qualification.ID)">Delete</button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+@code {
+    private bool isUpdate;
+    private async Task HandleSubmit()
+    {
+        if (isUpdate)
+        {
+            await AddAsync();
+        }
+        else
+        {
+            await UpdateAsync();
+        }
+    }
+    private List<QualificationModel> qualifications = new();
+    private bool isLoading = true;
+    private HideMessagesAfterDelay _hideMessage = new();
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            qualifications = await httpClient.GetFromJsonAsync<List<QualificationModel>>("api/QualificationsControlller");
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            //to hide the messages
+            _hideMessage.HideMessageAfterDelay(5000);
+            //HiddenMessageAsync();
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+
+    private QualificationModel newQualification = new();
+    public async Task AddAsync()
+    {
+        _hideMessage.SuccessMessage = null;
+        _hideMessage.ErrorMessage = null;
+        try
+        {
+            //var jsonStudent = Newtonsoft.Json.JsonConvert.SerializeObject(newStudent);
+            var response = await httpClient.PostAsJsonAsync("api/QualificationsControlller", newQualification);
+
+            if (response.IsSuccessStatusCode)
+            {
+                _hideMessage.SuccessMessage = "Qualification added successfully";
+                Console.WriteLine("Qualification added successfully");
+                //to hide the message
+                _hideMessage.HideMessageAfterDelay(5000);
+
+                //to reset the form 
+                newQualification = new QualificationModel();
+                    
+
+                // Optionally, reload the courses list
+                qualifications = await httpClient.GetFromJsonAsync<List<QualificationModel>>("api/QualificationsControlller");
+            }
+            else
+            {
+                _hideMessage.ErrorMessage = "Failed to add the qualification.";
+                Console.WriteLine("Failed to add the student.");
+                _hideMessage.HideMessageAfterDelay(5000);
+            }
+        }
+        catch (Exception ex)
+        {
+            _hideMessage.ErrorMessage = "An error occurred while adding the qualification: " + ex.Message;
+            Console.WriteLine($"An error occurred while adding the qualification: {ex.Message}");
+            _hideMessage.HideMessageAfterDelay(5000);
+        }
+    }
+
+
+    public async Task DeleteAsync(int id)
+    {
+        try
+        {
+            _hideMessage.Message = null;
+            var response = await httpClient.DeleteAsync($"api/QualificationsControlller/Qualifications/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("deleted");
+                _hideMessage.Message = "Student deleted Successfully";
+                _hideMessage.HideMessageAfterDelay(5000);
+
+                //to reload
+                qualifications = await httpClient.GetFromJsonAsync<List<QualificationModel>>("api/QualificationsControlller");
+
+
+            }
+            else
+            {
+                Console.WriteLine("deletion failed");
+                _hideMessage.Message = "Cant delete the Qualification";
+                _hideMessage.HideMessageAfterDelay(5000);
+                //HiddenMessageAsync();
+            }
+        }
+        catch
+        {
+            Console.WriteLine("an error occured");
+            _hideMessage.HideMessageAfterDelay(5000);
+            // HiddenMessageAsync();
+        }
+    }
+
+    private QualificationModel updateQualification = new();
+    public async Task LoadAsync(int id)
+    {
+        try
+        {
+            newQualification = await httpClient.GetFromJsonAsync<QualificationModel>($"api/QualificationsControlller/Qualifications/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            _hideMessage.HideMessageAfterDelay(5000);
+
+        }
+    }
+    public async Task UpdateAsync()
+    {
+        _hideMessage.UpdateSuccessMessage = null;
+        _hideMessage.UpdateErrorMessage = null;
+        var response = await httpClient.PutAsJsonAsync($"api/QualificationsControlller/Qualifications/{newQualification.ID}", newQualification);
+        if (response.IsSuccessStatusCode)
+        {
+            //to reload and get data
+            qualifications = await httpClient.GetFromJsonAsync<List<QualificationModel>>("api/QualificationsControlller");
+            _hideMessage.UpdateSuccessMessage = "Qualification updated Successfully";
+            Console.WriteLine("updated");
+            _hideMessage.HideMessageAfterDelay(5000);
+
+        }
+        else
+        {
+            _hideMessage.UpdateErrorMessage = "Qualification updation failed";
+            Console.WriteLine("updatation failed");
+            _hideMessage.HideMessageAfterDelay(5000);
+        }
+
+    }
+}

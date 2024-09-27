@@ -1,0 +1,219 @@
+﻿@page "/student-details"
+
+@inject HttpClient httpClient;
+
+@using student_management_system.Data
+<AuthorizeView>
+ <Authorized>
+<div class="d-flex flex-column  gap-4 ">
+    <h3>Student Details</h3>
+    @foreach (var student in paginatedStudents)
+    {
+        <div class="d-flex flex-column  border border-5 gap-3">
+            <h4 class="text-center">Personal Details</h4>
+            <div class="d-flex gap-5 px-5 ">
+                <label class="" for="firstName">First Name :</label>
+                <p class="">@student.FirstName</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="lastName">Last Name :</label>
+                <p>@student.LastName</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="emailD">Email :</label>
+                <p>@student.EmailD</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="mobileNumber">Mobile Number :</label>
+                <p>@student.MobileNumber</p>
+            </div>
+       
+            <div class="d-flex gap-5 px-5">
+                <label for="gender">Gender :</label>
+                <p>@student.Gender</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="address">Address :</label>
+                <p>@student.Address</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="city">City :</label>
+                <p>@student.City</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="pincode">Pincode :</label>
+                <p>@student.Pincode</p>
+            </div>
+        
+            <div class="d-flex gap-5 px-5">
+                <label for="state">State :</label>
+                <p>@student.State</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="country">Country :</label>
+                <p>@student.Country</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="courseID">Course ID :</label>
+
+                display course name insted of id
+                <p>@student.CourseID</p>
+            </div>
+      
+            
+            <div class="d-flex gap-5 px-5">
+                <label for="classXBoard">Class X Board :</label>
+                <p>@student.ClassXBoard</p>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-column  border border-5 gap-3">
+            <h4 class="text-center">Qualifications</h4>
+            <div class="d-flex gap-5 px-5">
+                <label for="classXPercentage">Class X Percentage :</label>
+                <p>@student.ClassXPercentage</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="classXYearOfPassing">Class X Year of Passing :</label>
+                <p>@student.ClassXYearOfPassing</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="classX11Board">Class X11 Board :</label>
+                <p>@student.ClassX11Board</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="class11Percentage">Class X11 Percentage :</label>
+                <p>@student.Class11Percentage</p>
+            </div>
+        
+
+            <div class="d-flex gap-5 px-5">
+                <label for="classX11YearOfPassing">Class X11 Year of Passing :</label>
+                <p>@student.ClassX11YearOfPassing</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="graduationBoard">Graduation Board :</label>
+                <p>@student.GraduationBoard</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="graduationPercentage">Graduation Percentage :</label>
+                <p>@student.GraduationPercentage</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="graduationYearOfPassing">Graduation Year of Passing :</label>
+                <p>@student.GraduationYearOfPasssing</p>
+            </div>
+       
+
+            <div class="d-flex gap-5 px-5">
+                <label for="mastersBoard">Masters Board :</label>
+                <p>@student.MastersBoard</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="mastersPercentage">Masters Percentage :</label>
+                <p>@student.MastersPercentage</p>
+            </div>
+
+            <div class="d-flex gap-5 px-5">
+                <label for="mastersYearOfPassing">Masters Year of Passing :</label>
+                <p>@student.MastersYearOfPasssing</p>
+            </div>
+            
+        </div>
+        <div class="d-flex flex-column border border-5 gap-3">
+            <h4 class="text-center">Hobbies</h4>
+            <div class="d-flex gap-5 px-5">
+                <label for="hobbies">Hobbies :</label>
+                <p>@string.Join(", ", @student.Hobbies.Select(h=>h.Hobbie))</p>
+            </div>
+        </div>
+      
+    }
+
+    <div class="d-flex justify-content-center mt-3 gap-3">
+        <button @onclick="PrevPage" class="btn btn-primary" disabled="@(!CanGoBack)">Previous</button>
+        <span class="mx-3">Page @currentPage of @totalPages</span>
+        <button @onclick="NextPage" class="btn btn-warning" disabled="@(!CanGoNext)">Next</button>
+    </div>
+   
+</div>
+</Authorized>
+</AuthorizeView>
+
+
+@code {
+    private List<StudentDetails> StudentDetails = new List<StudentDetails>();
+    private List<StudentDetails> paginatedStudents = new List<StudentDetails>();
+    //for student hobbies
+    private List<StudentHobbies> StudentHobbies = new();
+    private int currentPage = 1;
+    private int pageSize = 1;
+    private int totalPages;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            StudentDetails = await httpClient.GetFromJsonAsync<List<StudentDetails>>("api/StudentRegister");
+            totalPages = (int)Math.Ceiling((double)StudentDetails.Count / pageSize);
+            LoadPage();
+            Console.WriteLine("success");
+        }
+        catch
+        {
+            Console.WriteLine("error");
+        }
+    }
+
+    private void LoadPage()
+    {
+        paginatedStudents = StudentDetails
+            .Skip((currentPage - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+    }
+
+    private void NextPage()
+    {
+        if (currentPage < totalPages)
+        {
+            currentPage++;
+            LoadPage();
+        }
+    }
+
+    private void PrevPage()
+    {
+        if (currentPage > 1)
+        {
+            currentPage--;
+            LoadPage();
+        }
+    }
+
+    private bool CanGoNext => currentPage < totalPages;
+    private bool CanGoBack => currentPage > 1;
+
+
+    public async Task GetStudentHobbies()
+    {
+        //StudentHobbies = await httpClient.Get("api/StudentHobbies/StudentHobbies1");
+    } ///w <summary>
+      /// otrking on hobies to get by id
+      /// </summary>
+}
