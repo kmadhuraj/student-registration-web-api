@@ -4,8 +4,8 @@ D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Infrastru
 D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Infrastructure.pdb
 D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Application.dll
 D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Domain.dll
-D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Application.pdb
 D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Domain.pdb
+D:\StudentApiCleanArch\Student.Infrastructure\bin\Debug\net8.0\Student.Application.pdb
 D:\StudentApiCleanArch\Student.Infrastructure\obj\Debug\net8.0\Student.Infrastructure.csproj.AssemblyReference.cache
 D:\StudentApiCleanArch\Student.Infrastructure\obj\Debug\net8.0\Student.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\StudentApiCleanArch\Student.Infrastructure\obj\Debug\net8.0\Student.Infrastructure.AssemblyInfoInputs.cache

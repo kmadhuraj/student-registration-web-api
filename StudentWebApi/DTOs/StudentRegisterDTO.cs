@@ -8,7 +8,7 @@ namespace StudentWebApi.DTOs
     public class StudentRegisterDTO
     {
    
-        public List<StudentHobbiesDTO> Hobbies {get; set;} = new();
+        public List<StudentHobbiesDTO> Hobbies {get; set;}
         public int StudentID { get; set;}
 
         [Required(ErrorMessage = "First name is Required")]
@@ -35,9 +35,9 @@ namespace StudentWebApi.DTOs
         public int MobileNumber { get; set; }
 
         [Required(ErrorMessage = "Gender is required.")]
-        [MaxLength(10, ErrorMessage = "Gender cannot exceed 10 characters.")]
-        public Gender Gender { get; set; }
-        //public string Gender { get; set; }
+        //[MaxLength(10, ErrorMessage = "Gender cannot exceed 10 characters.")]
+        //public Gender Gender { get; set; }
+        public int Gender { get; set; }
 
         [Required(ErrorMessage = "Address is required.")]
         [MaxLength(100, ErrorMessage = "Address cannot exceed 100 characters.")]
@@ -64,10 +64,7 @@ namespace StudentWebApi.DTOs
         //courses
         public int CourseID { get; set; }
 
-        //[MaxLength(50)]
-        //public string CourseName { get; set; }
-
-
+        
         //qualifications 
 
         public string ClassXBoard { get; set; }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Student.Application.Abstractions;
 using Student.Domain.Entities;
@@ -21,7 +22,7 @@ namespace StudentWebApi.Controllers
 
         }
 
-
+        
         [HttpPost]
         public async Task<IActionResult> CreateStudent(StudentRegisterDTO StudentReg)
         {
@@ -37,7 +38,7 @@ namespace StudentWebApi.Controllers
                 studentDetails.LastName = StudentReg.LastName;
                 studentDetails.Address = StudentReg.Address;
                 studentDetails.MobileNumber = StudentReg.MobileNumber;
-                // studentDetails.Gender = StudentReg.Gender;
+                studentDetails.Gender = StudentReg.Gender;
                 studentDetails.State = StudentReg.State;
                 studentDetails.City = StudentReg.City;
                 studentDetails.Country = StudentReg.Country;
@@ -83,7 +84,7 @@ namespace StudentWebApi.Controllers
 
             return StatusCode(201, "Student Registration Successfull");
         }
-
+       
         [HttpGet]
         public async Task<IActionResult> GetRegister()
         {
@@ -110,6 +111,7 @@ namespace StudentWebApi.Controllers
                     Hobbie = h.Hobbie, // Adjust based on your actual property names
                     StudentID = h.StudentID
                 }).ToList();  // Adjust based on how hobbies are linked
+                //var studentHobbies = getHobbie.Where(h => h.ID == student.ID);
 
                 // Create a DTO object for each student
                 var studentRegister = new StudentRegisterDTO()
@@ -121,7 +123,7 @@ namespace StudentWebApi.Controllers
                     Address = student.Address,
                     State = student.State,
                     City = student.City,
-                    // Gender = student.Gender,
+                    Gender = student.Gender,
                     EmailD = student.EmailD,
                     Pincode = student.Pincode,
                     DateOfBirth = student.DateOfBirth,
@@ -154,8 +156,6 @@ namespace StudentWebApi.Controllers
             }
             return Ok(studentRegisterDetails);
         }
-
-
 
     }
 

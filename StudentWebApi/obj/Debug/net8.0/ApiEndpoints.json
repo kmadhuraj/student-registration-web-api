@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "StudentWebApi.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "Student.Domain.Entities.AdminModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StudentWebApi.Controllers.CoursesController",
     "Method": "AddCourse",
     "RelativePath": "api/Courses",

@@ -297,3 +297,5 @@ D:\StudentApiCleanArch\StudentWebApi\obj\Debug\net8.0\refint\StudentWebApi.dll
 D:\StudentApiCleanArch\StudentWebApi\obj\Debug\net8.0\StudentWebApi.pdb
 D:\StudentApiCleanArch\StudentWebApi\obj\Debug\net8.0\StudentWebApi.genruntimeconfig.cache
 D:\StudentApiCleanArch\StudentWebApi\obj\Debug\net8.0\ref\StudentWebApi.dll
+D:\StudentApiCleanArch\StudentWebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\StudentApiCleanArch\StudentWebApi\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll

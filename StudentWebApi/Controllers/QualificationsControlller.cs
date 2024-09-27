@@ -15,8 +15,9 @@ namespace StudentWebApi.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ApplicationDbContext _context;
-        public QualificationsControlller(IUnitOfWork unitOfWork, IMapper mapper,ApplicationDbContext _context)
+        public QualificationsControlller(IUnitOfWork unitOfWork, IMapper mapper,ApplicationDbContext context)
         {
+            _context = context;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }

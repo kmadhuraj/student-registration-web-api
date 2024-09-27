@@ -9,11 +9,7 @@ using System.Threading.Tasks;
 
 namespace Student.Domain.Entities
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
+    
     public class StudentDetails
     {
         [Key]
@@ -33,7 +29,7 @@ namespace Student.Domain.Entities
         public int MobileNumber { get; set; }
 
         //public string Gender { get; set; }
-        public  Gender Gender { get; set; }
+        public  int Gender { get; set; }
 
         public string Address { get; set; }
 
